@@ -21,10 +21,10 @@ jobs:
       - run: npm ci
       - run: npx ng build --configuration production --base-href /
 
-      - run: echo "aghersi.dev" > dist/*/CNAME
+      - run: echo "aghersi.dev" > dist/home/CNAME
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: dist/*
+          publish_dir: dist/home
