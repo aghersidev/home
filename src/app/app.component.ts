@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andres Ghersi | Software Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="./resources/css/main.css">
-<script src="./resources/js/main.js"></script>
-</head>
-<body>
-    <!-- Header -->
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+@Component({
+    selector: 'app-root',
+    standalone: true,
+    imports: [CommonModule],
+    template: `
     <header>
         <div class="container">
             <nav>
@@ -192,7 +188,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <a href="mailto:andresghersi@gmail.com">andresghersi@gmail.com</a>
+                                <a href="mailto:andresghersi&#64;gmail.com">andresghersi&#64;gmail.com</a>
                             </div>
                         </div>
                       
@@ -254,6 +250,68 @@
                 </div>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+    </footer>`
+})
+export class AppComponent {
+    menuOpen = false;
+
+    projects = [
+        {
+            title: 'E-commerce Platform',
+            description: 'A full-featured online store with product listings, shopping cart, and secure checkout system built with React and Node.js.',
+            image: 'https://images.unsplash.com/photo-1547658719-da2b51169166',
+            tags: ['React', 'Node.js', 'MongoDB'],
+            demo: '#',
+            repo: '#'
+        },
+        {
+            title: 'Task Manager',
+            description: 'A productivity application for organizing tasks with drag-and-drop functionality, team collaboration and real-time updates.',
+            image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40',
+            tags: ['Vue.js', 'Firebase', 'Tailwind CSS'],
+            demo: '#',
+            repo: '#'
+        },
+        {
+            title: 'Recipe Finder',
+            description: 'A culinary application that allows users to search recipes by ingredients, dietary restrictions, and cooking time.',
+            image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d',
+            tags: ['JavaScript', 'API', 'SCSS'],
+            demo: '#',
+            repo: '#'
+        }
+    ];
+
+    techStack = [
+        { name: 'JavaScript', icon: 'fab fa-js-square' },
+        { name: 'React', icon: 'fab fa-react' },
+        { name: 'Node.js', icon: 'fab fa-node-js' },
+        { name: 'Python', icon: 'fab fa-python' },
+        { name: 'HTML5', icon: 'fab fa-html5' },
+        { name: 'CSS3', icon: 'fab fa-css3-alt' },
+        { name: 'AWS', icon: 'fab fa-aws' },
+        { name: 'MongoDB', icon: 'fas fa-database' },
+        { name: 'Git', icon: 'fab fa-git-alt' },
+        { name: 'Docker', icon: 'fab fa-docker' },
+        { name: 'npm', icon: 'fab fa-npm' },
+        { name: 'Express', icon: 'fas fa-server' }
+    ];
+    ngAfterViewInit() {
+        // Smooth scrolling for navigation links
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e: Event) => {
+                e.preventDefault();
+
+                const target = document.querySelector(
+                    (e.currentTarget as HTMLAnchorElement).getAttribute('href')!
+                );
+
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+    }
+}
