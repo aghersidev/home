@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AnimatedTextComponent } from "./animated-text-component/animated-text-component.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, AnimatedTextComponent],
     template: `
     <header>
         <div class="container">
@@ -28,9 +29,9 @@ import { CommonModule } from '@angular/common';
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1>Hi, I'm <span>Andres Ghersi</span></h1>
-                    <h2>Full Stack Software Engineer</h2>
-                    <p>I am a Software Engineer with experience in Cloud projects, Databases and Agile Methodologies. Check my past projects and technology stacks section for more detail.</p>
+                <h1>Hi, I'm <span>Andres Ghersi</span></h1>
+                    <h2><app-animated-text [text]="'Full Stack Software Engineer'" [initialDelay]="0.0" [extraDelay]="0.04"></app-animated-text></h2>
+                    <p><app-animated-text [text]="'I am a Software Engineer with experience in Cloud projects, Databases and Agile Methodologies. Check my past projects and technology stacks section for more detail.'" [initialDelay]="0.8" [extraDelay]="0.00"></app-animated-text></p>
                     <div class="cta-buttons">
                         <a href="#projects" class="btn btn-primary">View Projects</a>
                         <a href="#contact" class="btn btn-secondary">Contact Me</a>
