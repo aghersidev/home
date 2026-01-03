@@ -54,7 +54,7 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
     <section class="section" id="projects">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>My Projects</h2>
+                <h2>Some projects I have worked on</h2>
             </div>
             <div class="projects-grid">
                 @for (project of projects; track project.title) {
@@ -88,7 +88,7 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
             <!-- Tech Stack Bento Grid -->
             <div class="tech-stack fade-in delay-4" id="tech">
                 <div class="section-title fade-in">
-                    <h2>My Tech Stack</h2>
+                    <h2>Technologies I use most of the time</h2>
                 </div>
                 <div class="bento-grid">
                     @for (tech of techStack; track tech.name) {
@@ -219,18 +219,13 @@ export class AppComponent {
     ];
 
     techStack = [
-        { name: 'JavaScript', icon: 'fab fa-js-square' },
-        { name: 'React', icon: 'fab fa-react' },
-        { name: 'Node.js', icon: 'fab fa-node-js' },
-        { name: 'Python', icon: 'fab fa-python' },
-        { name: 'HTML5', icon: 'fab fa-html5' },
-        { name: 'CSS3', icon: 'fab fa-css3-alt' },
+        { name: 'Angular', icon: 'fab fa-angular' },
+        { name: 'SpringBoot', icon: 'fab fa-java' },
         { name: 'AWS', icon: 'fab fa-aws' },
-        { name: 'MongoDB', icon: 'fas fa-database' },
+        { name: 'Relational Databases', icon: 'fas fa-database' },
         { name: 'Git', icon: 'fab fa-git-alt' },
         { name: 'Docker', icon: 'fab fa-docker' },
-        { name: 'npm', icon: 'fab fa-npm' },
-        { name: 'Express', icon: 'fas fa-server' }
+        { name: 'Bootstrap', icon: 'fab fa-bootstrap' },
     ];
     ngAfterViewInit() {
         // Smooth scrolling for navigation links
