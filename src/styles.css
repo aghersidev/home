@@ -202,7 +202,7 @@ nav {
 
 /* Projects Section */
 .section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .section-title {
@@ -315,7 +315,10 @@ nav {
 .project-links a i {
     font-size: 0.9rem;
 }
-
+.projects {
+    margin-top: 50px;
+    padding-top: 50px;
+}
 /* Tech Stack Bento Grid */
 .tech-stack {
     background-color: white;
