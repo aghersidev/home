@@ -119,54 +119,14 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                     <h2>My Tech Stack</h2>
                 </div>
                 <div class="bento-grid">
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-js-square"></i></div>
-                        <div class="tech-name">JavaScript</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-react"></i></div>
-                        <div class="tech-name">React</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-node-js"></i></div>
-                        <div class="tech-name">Node.js</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-python"></i></div>
-                        <div class="tech-name">Python</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-html5"></i></div>
-                        <div class="tech-name">HTML5</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
-                        <div class="tech-name">CSS3</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-aws"></i></div>
-                        <div class="tech-name">AWS</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fas fa-database"></i></div>
-                        <div class="tech-name">MongoDB</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
-                        <div class="tech-name">Git</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-docker"></i></div>
-                        <div class="tech-name">Docker</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fab fa-npm"></i></div>
-                        <div class="tech-name">npm</div>
-                    </div>
-                    <div class="tech-item">
-                        <div class="tech-icon"><i class="fas fa-server"></i></div>
-                        <div class="tech-name">Express</div>
-                    </div>
+                    @for (tech of techStack; track tech.name) {
+                        <div class="tech-item">
+                            <div class="tech-icon"><i class="{{tech.icon}}"></i></div>
+                            <div class="tech-name">{{tech.name}}</div>
+                        </div>
+                    } @empty {
+                        <p>No technologies to display.</p>
+                    }
                 </div>
             </div>
         </div>
@@ -251,8 +211,11 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                 </div>
             </div>
         </div>
-    </footer>`
-})
+      </footer>
+    `,
+    styleUrls: ['./app.component.css']
+}
+)
 export class AppComponent {
     menuOpen = false;
 
@@ -313,6 +276,5 @@ export class AppComponent {
                 }
             });
         });
-
     }
 }
