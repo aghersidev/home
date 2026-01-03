@@ -57,65 +57,37 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                 <h2>My Projects</h2>
             </div>
             <div class="projects-grid">
-                <div class="project-card fade-in delay-1">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="E-commerce Platform">
-                    </div>
-                    <div class="project-info">
-                        <h3>E-commerce Platform</h3>
-                        <p>A full-featured online store with product listings, shopping cart, and secure checkout system built with React and Node.js.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MongoDB</span>
+                @for (project of projects; track project.title) {
+                    <div class="project-card fade-in delay-1">
+                        <div class="project-image">
+                            <img src="{{project.image}}" alt="{{project.title}}">
                         </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card fade-in delay-2">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Task Manager">
-                    </div>
-                    <div class="project-info">
-                        <h3>Task Management App</h3>
-                        <p>A productivity application for organizing tasks with drag-and-drop functionality, team collaboration and real-time updates.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Vue.js</span>
-                            <span class="project-tag">Firebase</span>
-                            <span class="project-tag">Tailwind CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        <div class="project-info">
+                            <h3>{{project.title}}</h3>
+                            <p>{{project.description}}</p>
+                            <div class="project-tags">
+
+                                @for (tag of project.tags; track tag) {
+                                    <span class="project-tag">{{tag}}</span>
+                                } @empty {
+                                    <p>No tags available.</p>
+                                }
+                            </div>
+                            <div class="project-links">
+                                <a href="{{project.demo}}"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="{{project.repo}}"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="project-card fade-in delay-3">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Recipe Finder">
-                    </div>
-                    <div class="project-info">
-                        <h3>Recipe Finder</h3>
-                        <p>A culinary application that allows users to search recipes by ingredients, dietary restrictions, and cooking time.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">API</span>
-                            <span class="project-tag">SCSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
+                } @empty {
+                    <p>No projects to display.</p>
+                }
+                    
             </div>
 
             <!-- Tech Stack Bento Grid -->
             <div class="tech-stack fade-in delay-4" id="tech">
-                <div class="section-title">
+                <div class="section-title fade-in">
                     <h2>My Tech Stack</h2>
                 </div>
                 <div class="bento-grid">
