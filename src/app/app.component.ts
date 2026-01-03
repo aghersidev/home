@@ -66,7 +66,6 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                             <h3>{{project.title}}</h3>
                             <p>{{project.description}}</p>
                             <div class="project-tags">
-
                                 @for (tag of project.tags; track tag) {
                                     <span class="project-tag">{{tag}}</span>
                                 } @empty {

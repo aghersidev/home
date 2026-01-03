@@ -158,20 +158,6 @@ nav {
     gap: 20px;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.btn-primary {
-    background-color: var(--primary);
-    color: white;
-}
-
 .btn-primary:hover {
     background-color: #2a75e6;
     transform: translateY(-3px);
