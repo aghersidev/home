@@ -42,14 +42,12 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                             <i class="fa-solid fa-file-pdf"></i> Download Resume</a>
                     </div>
                     <div class="social-links">
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                        <a href="https://github.com/aghersidev/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/andres-ghersi/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="hero-image fade-in delay-1">
-                    <img src="./resources/images/6555646.JPG" alt="Andres Ghersi">
+                    <img src="images/andresghersi.png" alt="Andres Ghersi">
                 </div>
             </div>
         </div>
