@@ -118,16 +118,13 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
             <div class="footer-content">
                 <div class="footer-logo">Andres<span>Ghersi</span></div>
                 <div class="footer-social">
-                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/aghersidev/" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/andres-ghersi/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#projects">Projects</a>
                     <a href="#tech">Skills</a>
-                    <a href="#contact">Contact</a>
                 </div>
                 <div class="copyright">
                     &copy; 2025 Andres Ghersi. All rights reserved.
