@@ -38,8 +38,9 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                     <div class="cta-buttons">
                         <a href="#projects" class="btn btn-primary">
                             <i class="fa-solid fa-folder"></i> View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fa-solid fa-file-pdf"></i> Download Resume</a>
+                        <a href="/Andres_Ghersi_Resume.pdf" class="btn btn-primary" download="Andres_Ghersi_Resume.pdf">
+                            <i class="fa-solid fa-file-pdf"></i> Download CV / Resume
+                        </a>
                     </div>
                     <div class="social-links">
                         <a href="https://github.com/aghersidev/" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -78,9 +79,13 @@ import { AnimatedTextComponent } from "./animated-text-component/animated-text-c
                                 }
                             </div>
                             <div class="project-links">
-                                <a href="{{project.demo}}"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                                <a href="{{project.repo}}"><i class="fab fa-github"></i> Source Code</a>
-                            </div>
+                                @if (project?.demo && project.demo !== '#') {
+                                    <a href="{{project.demo}}"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                }
+                                @if (project?.repo && project.repo !== '#') {
+                                    <a href="{{project.repo}}"><i class="fab fa-github"></i> Source Code</a>
+                                }
+                                </div>
                         </div>
                     </div>
                 } @empty {
@@ -145,7 +150,7 @@ export class AppComponent {
             description: 'A fully featured email notifications IaC pipeline for internal usage of Amazon teams, powered by AWS services.',
             image: 'https://images.unsplash.com/photo-1547658719-da2b51169166',
             tags: ['AWS', 'TypeScript', 'CDK'],
-            demo: 'https://www.amazon.com/',
+            demo: '#',
             repo: '#'
         },
         {
