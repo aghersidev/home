@@ -1,59 +1,58 @@
-# Home
+# Andres Ghersi - Personal Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
 
-## Development server
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![FontAwesome](https://img.shields.io/badge/FontAwesome-528DD1?style=for-the-badge&logo=font-awesome&logoColor=white)
 
-To start a local development server, run:
+[🌐 Visit my site](https://aghersi.dev)  
+
+Welcome to my **personal webiste / portfolio** developed with **Angular and Github pages**. There you can find my projects, technology stack and download my CV / Resume.
+
+## Main Features
+
+- Single page **smooth scroll with CSS-only**  
+- Direct download of CV / Resume  
+- Responsive menu for mobile
+- Modular code with **Angular Standalone Components**  
+- Links to demos and repositories for projects  
+- Bento grid for tech stack icons
+
+## How to clone and run locally
+
+1. Clone and install:
+```bash
+git clone https://github.com/aghersidev/home.git
+cd home
+npm install
+```
+
+Execute the app in dev mode:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Open the url shown in console:
 
 ```bash
-ng generate component component-name
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Customization
 
-```bash
-ng generate --help
-```
+- Change your name in app.component.html and hero.component.html
+- Add your projects in projects.data.ts
+- Add your technologies in tech-stack.data.ts
+- Update links to your own social networks in Header and Footer
+- Replace with your own captures / portfolio
 
-## Building
+##  Licence
 
-To build the project run:
+This project in under MIT License.
+You can use it for your own portfolio.
 
-```bash
-ng build
-```
+## Contact
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- GitHub: https://github.com/aghersidev
+- LinkedIn: https://linkedin.com/in/andres-ghersi
