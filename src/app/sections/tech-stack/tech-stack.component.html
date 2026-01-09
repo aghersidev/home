@@ -1,0 +1,24 @@
+<section class="section" id="tech">
+  <div class="container">
+    <div class="tech-stack fade-in">
+      <div class="section-title fade-in">
+        <h2>Technologies I use most of the time</h2>
+      </div>
+
+      <div class="bento-grid">
+        @for (tech of techStack; track tech.name) {
+          <div class="tech-item">
+            <div class="tech-icon">
+              <i [class]="tech.icon"></i>
+            </div>
+            <div class="tech-name">
+              {{ tech.name }}
+            </div>
+          </div>
+        } @empty {
+          <p>No technologies to display.</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

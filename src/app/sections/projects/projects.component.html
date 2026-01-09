@@ -1,0 +1,46 @@
+<section class="section" id="projects">
+  <div class="container">
+    <div class="projects">
+      <div class="section-title fade-in">
+        <h2>Some projects I have worked on</h2>
+      </div>
+
+      <div class="projects-grid">
+        @for (project of projects; track project.title) {
+          <div class="project-card fade-in delay-1">
+            <div class="project-image">
+              <img [src]="project.image" [alt]="project.title" />
+            </div>
+
+            <div class="project-info">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.description }}</p>
+
+              <div class="project-tags">
+                @for (tag of project.tags; track tag) {
+                  <span class="project-tag">{{ tag }}</span>
+                }
+              </div>
+
+              <div class="project-links">
+                @if (project.demo && project.demo !== '#') {
+                  <a [href]="project.demo" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                  </a>
+                }
+
+                @if (project.repo && project.repo !== '#') {
+                  <a [href]="project.repo" target="_blank">
+                    <i class="fab fa-github"></i> Source Code
+                  </a>
+                }
+              </div>
+            </div>
+          </div>
+        } @empty {
+          <p>No projects to display.</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

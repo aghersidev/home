@@ -1,0 +1,7 @@
+.logo {
+  cursor: pointer;
+}
+
+.nav-links.open {
+  display: block;
+}
